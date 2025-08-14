@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Football Match Widget</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="widget-container">
+        <header class="widget-header">
+            <h1><i class="fas fa-futbol"></i> Live Football Matches</h1>
+            <div class="refresh-indicator">
+                <span id="lastUpdate">Last updated: Never</span>
+                <button id="refreshBtn" class="refresh-btn">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="api-config">
+            <div class="api-input-group">
+                <input type="password" id="apiKey" placeholder="Enter your API-Football key">
+                <button id="saveApiKey" class="save-btn">Save</button>
+            </div>
+            <p class="api-note">Get your free API key from <a href="https://rapidapi.com/api-sports/api/api-football" target="_blank">API-Football</a></p>
+        </div>
+
+        <div class="league-selector">
+            <select id="leagueSelect">
+                <option value="39">Premier League</option>
+                <option value="140">La Liga</option>
+                <option value="135">Serie A</option>
+                <option value="78">Bundesliga</option>
+                <option value="61">Ligue 1</option>
+                <option value="2">UEFA Champions League</option>
+            </select>
+        </div>
+
+        <div class="match-tabs">
+            <button class="tab-btn active" data-tab="live">Live Matches</button>
+            <button class="tab-btn" data-tab="today">Today's Matches</button>
+            <button class="tab-btn" data-tab="upcoming">Upcoming</button>
+        </div>
+
+        <div class="matches-container">
+            <div id="liveMatches" class="matches-section active">
+                <div class="loading" id="loadingLive">
+                    <i class="fas fa-spinner fa-spin"></i> Loading live matches...
+                </div>
+                <div id="liveMatchesList" class="matches-list"></div>
+            </div>
+
+            <div id="todayMatches" class="matches-section">
+                <div class="loading" id="loadingToday">
+                    <i class="fas fa-spinner fa-spin"></i> Loading today's matches...
+                </div>
+                <div id="todayMatchesList" class="matches-list"></div>
+            </div>
+
+            <div id="upcomingMatches" class="matches-section">
+                <div class="loading" id="loadingUpcoming">
+                    <i class="fas fa-spinner fa-spin"></i> Loading upcoming matches...
+                </div>
+                <div id="upcomingMatchesList" class="matches-list"></div>
+            </div>
+        </div>
+
+        <!-- Match Details Modal -->
+        <div id="matchModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modalTitle">Match Details</h2>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div id="modalContent">
+                        <!-- Match details will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
