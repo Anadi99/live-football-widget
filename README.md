@@ -106,8 +106,8 @@ All visual customization can be done in `styles.css`. The design uses CSS Grid a
 
 
 
+<img width="1578" height="501" alt="Screenshot 2025-08-14 170841 (1)" src="https://github.com/user-attachments/assets/14589c21-f6af-43b2-86aa-718a014bab03" />
 
-<img width="1578" height="501" alt="image" src="https://github.com/user-attachments/assets/f532604a-9387-4a03-8f11-a43254911c79" />
 
 ## Performance Notes
 
