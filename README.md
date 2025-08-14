@@ -104,6 +104,11 @@ this.refreshRate = 30000; // 30 seconds
 ### Styling Changes
 All visual customization can be done in `styles.css`. The design uses CSS Grid and Flexbox for responsive layouts.
 
+
+
+
+<img width="1578" height="501" alt="image" src="https://github.com/user-attachments/assets/f532604a-9387-4a03-8f11-a43254911c79" />
+
 ## Performance Notes
 
 - The free API tier allows 500 requests per day
